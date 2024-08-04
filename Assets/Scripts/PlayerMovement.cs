@@ -98,9 +98,11 @@ public class PlayerMovement : MonoBehaviour
         particle = Instantiate(particle, transform.position, particle.transform.rotation);
         particle.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);  
 
-        anim.SetInteger("isAttack", 0);
         yield return new WaitForSeconds(0.3f);
+        anim.SetInteger("isAttack", 0);
 
         Destroy(particle); 
     }
+
+    
 }
